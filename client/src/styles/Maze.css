@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#view {
+    margin-top: 100px;
+}
+
+
+#mazeContainer #mazeCanvas {
+    margin: 0;
+    display: block;
+    border: solid 3px black;
+    height: 420px;
+    border-radius: 4px;
+}
+
+
+#Message-Container {
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+#Message-Container #message {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+#page {
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+
+#instructions {
+    margin-top: 430px;
+}
+ 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	input, select {
+	    width: 120px;
+	}
+}
