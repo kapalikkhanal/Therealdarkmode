@@ -1,5 +1,6 @@
 import React from 'react'
 import { useColorMode, Button } from '@chakra-ui/react';
+import Link from 'next/link';
 
 
 function NavBar() {
@@ -30,7 +31,7 @@ function NavBar() {
                         </button>
                     </div>
                     <div className="items-center justify-between hidden md:flex md:w-auto md:order-1" id="navbar-sticky">
-                        <a href="/AboutMe" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Me</a>
+                        <Link href="/AboutMe" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Me</Link>
                     </div>
                     
                 </div>

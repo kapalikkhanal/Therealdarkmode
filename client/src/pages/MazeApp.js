@@ -1,146 +1,6 @@
-// // src/MazeApp.js
-// import React, { useEffect } from 'react';
-// // import '../../src/styles/Maze.css';
-// import './script'; // Include your existing JavaScript file
-
-// function MazeApp() {
-//     useEffect(() => {
-//         // Initialize your maze game when the component mounts
-//         window.onload = function () {
-//             let viewWidth = $("#view").width();
-//             let viewHeight = $("#view").height();
-//             if (viewHeight < viewWidth) {
-//                 ctx.canvas.width = viewHeight - viewHeight / 100;
-//                 ctx.canvas.height = viewHeight - viewHeight / 100;
-//             } else {
-//                 ctx.canvas.width = viewWidth - viewWidth / 100;
-//                 ctx.canvas.height = viewWidth - viewWidth / 100;
-//             }
-
-//             //Load and edit sprites
-//             var completeOne = false;
-//             var completeTwo = false;
-//             var isComplete = () => {
-//                 if (completeOne === true && completeTwo === true) {
-//                     console.log("Runs");
-//                     setTimeout(function () {
-//                         makeMaze();
-//                     }, 500);
-//                 }
-//             };
-//             sprite = new Image();
-//             sprite.src =
-//                 "./key.png" +
-//                 "?" +
-//                 new Date().getTime();
-//             sprite.setAttribute("crossOrigin", " ");
-//             sprite.onload = function () {
-//                 sprite = changeBrightness(1.2, sprite);
-//                 completeOne = true;
-//                 console.log(completeOne);
-//                 isComplete();
-//             };
-
-//             finishSprite = new Image();
-//             finishSprite.src = "./home.png" +
-//                 "?" +
-//                 new Date().getTime();
-//             finishSprite.setAttribute("crossOrigin", " ");
-//             finishSprite.onload = function () {
-//                 finishSprite = changeBrightness(1.1, finishSprite);
-//                 completeTwo = true;
-//                 console.log(completeTwo);
-//                 isComplete();
-//             };
-
-//         };
-
-//         // Handle window resize
-//         window.onresize = function () {
-//             let viewWidth = $("#view").width();
-//             let viewHeight = $("#view").height();
-//             if (viewHeight < viewWidth) {
-//                 ctx.canvas.width = viewHeight - viewHeight / 100;
-//                 ctx.canvas.height = viewHeight - viewHeight / 100;
-//             } else {
-//                 ctx.canvas.width = viewWidth - viewWidth / 100;
-//                 ctx.canvas.height = viewWidth - viewWidth / 100;
-//             }
-//             cellSize = mazeCanvas.width / difficulty;
-//             if (player != null) {
-//                 draw.redrawMaze(cellSize);
-//                 player.redrawPlayer(cellSize);
-//             }
-//         };
-//     }, []);
-
-//     return (
-// <div className="MazeApp">
-//     {/* The HTML content from your index.html file */}
-//     {/* <!DOCTYPE html> */}
-//     <div lang="en">
-//         <div>
-//             <meta charset="UTF-8" />
-//             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-//             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-//             <title>Maze</title>
-//             <link rel="stylesheet" href="./style.css" />
-//         </div>
-//         <div>
-
-//             <div id="page">
-
-//                 <div id="Message-Container">
-//                     <div id="message">
-//                         <h1>Congratulations!</h1>
-//                         <p>You are done.</p>
-//                         <p id="moves"></p>
-//                         <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
-//                     </div>
-//                 </div>
-//                 <div id="menu">
-//                     <div class="custom-select">
-//                         <select id="diffSelect">
-//                             <option value="10">Easy</option>
-//                             <option value="15">Medium</option>
-//                             <option value="25">Hard</option>
-//                             <option value="38">Extreme</option>
-//                         </select>
-//                     </div>
-//                     {/* onSubmit={values => { handleSubmit(values); }} */}
-//                     <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
-//                 </div>
-
-//                 <div id="view">
-//                     <div id="mazeContainer">
-//                         <canvas id="mazeCanvas" class="border" height="400" width="400"></canvas>
-//                     </div>
-//                 </div>
-
-//                 <p id="instructions">Use arrow keys to move the key to the house!</p>
-
-//             </div>
-
-//             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-//             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-
-//             <script src="./script.js"></script>
-//         </div>
-//     </div>
-// </div>
-//     );
-// }
-
-// export default MazeApp;
-
-// src/MazeApp.js
 import { useRef } from 'react';
 import React, { useEffect } from 'react';
-// import '../../src/styles/Maze.css';
-// import './script'; // Include your existing JavaScript file
-import { changeBrightness, Player, DrawMaze, Maze, toggleVisibility, displayVictoryMess, shuffle, rand } from './script.js';
-import { color } from 'framer-motion';
-import { red } from '@mui/material/colors';
+import { changeBrightness, Player, DrawMaze, Maze, toggleVisibility, displayVictoryMess, shuffle, rand } from '../components/script.js';
 
 function MazeApp() {
     const mazeCanvasRef = useRef(null);
@@ -250,14 +110,14 @@ function MazeApp() {
                             </div>
                             <div id="view" className='flex justify-center space-y-10 bg-red-400'>
                                 <div id="mazeContainer">
-                                    <canvas ref={mazeCanvasRef} id="mazeCanvas"  height="400" width="400"></canvas>
+                                    <canvas ref={mazeCanvasRef} id="mazeCanvas" height="400" width="400"></canvas>
                                 </div>
                             </div>
                             <p className='text-md text-[#618045] mt-1'>Use arrow keys to move the key to the house.</p>
                         </div>
-                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-                        <script src="./script.js"></script>
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" async />
+                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js" async />
+                        <script src="./script.js" async />
                     </div>
                 </div>
             </div>
