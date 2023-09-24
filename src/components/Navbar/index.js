@@ -11,9 +11,9 @@ function NavBar() {
         <nav className="bg-white dark:bg-gray-900  w-full top-0 left-0 border-gray-200 dark:border-gray-600">
             <div className="w-auto mx-11 flex justify-between p-4 items-center">
                 <div>
-                    <a href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center">
                         <span className="self-center text-2xl font-extrabold whitespace-nowrap dark:text-white">TRDM</span>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Color Mode  */}
