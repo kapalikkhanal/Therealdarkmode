@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TheRealDarkMode - A Unique Fun Project
+"TheRealDarkMode" is a fun and unique project that transforms your screen into a game where a black overlay exists, and only a portion around your mouse cursor is visible. Within this dark overlay, you can play a simple maze game. This project is built using basic libraries such as Chakra UI, jQuery, Tailwind CSS, and more.
 
-## Getting Started
+## Table of Contents
+* Features
+* Demo
+* How to Play
+* Libraries
 
-First, run the development server:
+## Features
+* A unique and engaging dark mode experience.
+* Interactive mouse cursor visibility.
+* A fun and entertaining way to experience "the real dark mode."
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Demo
+See the live demo of the application (https://trdm.kapalik.com.np).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to Play
+* On the landing page, You'll enter the dark mode experience, where only the area around your mouse cursor is illuminated.
+* Use your mouse cursor to navigate and interact with the environment.
+* You'll encounter a simple maze game to explore and solve within the dark overlay.
+* Use your keyboard arrows to move the components of the maze.
+* Use mouse cursor to select the difficulty levels.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Libraries
+* Tailwind CSS: For styling and layout design.
+* jQuery: Used for interactive elements and game mechanics.
+* Next.js: React framework for building client-server rendered applications with easy navigation.
+* Chakra UI: Modular component library for creating a responsive and user-friendly design.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

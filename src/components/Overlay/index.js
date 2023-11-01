@@ -55,7 +55,6 @@ function BlackOverlay() {
       {/* Add a div for the "TRDM" text with a mask */}
       <div className="fixed" style={textOverlayStyle}>
         <div style={{ maskImage: overlayStyle.background }}>
-          The Real Dark Mode
         </div>
       </div>
     </>
